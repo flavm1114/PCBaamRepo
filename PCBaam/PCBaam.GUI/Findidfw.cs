@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace PCBaam.GUI
 {
-    public partial class Form1 : Form
+    public partial class Findidfw : Form
     {
-        public Form1()
+        public Findidfw()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ExitButton_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }
