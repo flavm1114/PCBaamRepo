@@ -1,6 +1,6 @@
 ﻿namespace PCBaam.GUI
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -113,6 +113,7 @@
             this.FindIdPw.TabIndex = 15;
             this.FindIdPw.Text = "ID/PW 찾기";
             this.FindIdPw.UseVisualStyleBackColor = false;
+            this.FindIdPw.Click += new System.EventHandler(this.FindIdPw_Click);
             // 
             // label1
             // 
