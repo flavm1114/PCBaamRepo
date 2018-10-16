@@ -54,8 +54,9 @@
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 450);
+            this.panel1.Size = new System.Drawing.Size(700, 360);
             this.panel1.TabIndex = 0;
             // 
             // ExitButton
@@ -64,9 +65,10 @@
             this.ExitButton.BackColor = System.Drawing.Color.Black;
             this.ExitButton.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.ExitButton.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.ExitButton.Location = new System.Drawing.Point(631, 381);
+            this.ExitButton.Location = new System.Drawing.Point(552, 305);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(140, 39);
+            this.ExitButton.Size = new System.Drawing.Size(122, 31);
             this.ExitButton.TabIndex = 16;
             this.ExitButton.Text = "종료";
             this.ExitButton.UseVisualStyleBackColor = false;
@@ -80,9 +82,10 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
             this.button1.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.button1.Location = new System.Drawing.Point(653, 279);
+            this.button1.Location = new System.Drawing.Point(571, 223);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 96);
+            this.button1.Size = new System.Drawing.Size(103, 77);
             this.button1.TabIndex = 13;
             this.button1.Text = "로그인";
             this.button1.UseVisualStyleBackColor = false;
@@ -95,9 +98,9 @@
             this.IDLabel.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.IDLabel.Font = new System.Drawing.Font("함초롬바탕", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.IDLabel.ForeColor = System.Drawing.Color.Black;
-            this.IDLabel.Location = new System.Drawing.Point(350, 281);
+            this.IDLabel.Location = new System.Drawing.Point(306, 225);
             this.IDLabel.Name = "IDLabel";
-            this.IDLabel.Size = new System.Drawing.Size(138, 35);
+            this.IDLabel.Size = new System.Drawing.Size(113, 29);
             this.IDLabel.TabIndex = 9;
             this.IDLabel.Text = "아이디(ID)";
             // 
@@ -107,9 +110,10 @@
             this.FindIdPw.BackColor = System.Drawing.Color.Black;
             this.FindIdPw.Cursor = System.Windows.Forms.Cursors.Default;
             this.FindIdPw.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.FindIdPw.Location = new System.Drawing.Point(485, 381);
+            this.FindIdPw.Location = new System.Drawing.Point(424, 305);
+            this.FindIdPw.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FindIdPw.Name = "FindIdPw";
-            this.FindIdPw.Size = new System.Drawing.Size(140, 39);
+            this.FindIdPw.Size = new System.Drawing.Size(122, 31);
             this.FindIdPw.TabIndex = 15;
             this.FindIdPw.Text = "ID/PW 찾기";
             this.FindIdPw.UseVisualStyleBackColor = false;
@@ -123,9 +127,9 @@
             this.label1.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.label1.Font = new System.Drawing.Font("함초롬바탕", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(311, 323);
+            this.label1.Location = new System.Drawing.Point(272, 258);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 35);
+            this.label1.Size = new System.Drawing.Size(144, 29);
             this.label1.TabIndex = 10;
             this.label1.Text = "비밀번호(PW)";
             // 
@@ -135,38 +139,43 @@
             this.SignUpButton.BackColor = System.Drawing.Color.Black;
             this.SignUpButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.SignUpButton.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.SignUpButton.Location = new System.Drawing.Point(333, 381);
+            this.SignUpButton.Location = new System.Drawing.Point(291, 305);
+            this.SignUpButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SignUpButton.Name = "SignUpButton";
-            this.SignUpButton.Size = new System.Drawing.Size(146, 39);
+            this.SignUpButton.Size = new System.Drawing.Size(128, 31);
             this.SignUpButton.TabIndex = 14;
             this.SignUpButton.Text = "회원가입";
             this.SignUpButton.UseVisualStyleBackColor = false;
+            this.SignUpButton.Click += new System.EventHandler(this.SignUpButton_Click);
             // 
             // textBox2
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(494, 333);
+            this.textBox2.Location = new System.Drawing.Point(432, 266);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(153, 25);
+            this.textBox2.Size = new System.Drawing.Size(134, 21);
             this.textBox2.TabIndex = 12;
             // 
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(494, 291);
+            this.textBox1.Location = new System.Drawing.Point(432, 233);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(153, 25);
+            this.textBox1.Size = new System.Drawing.Size(134, 21);
             this.textBox1.TabIndex = 11;
             // 
-            // Form1
+            // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(700, 360);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "MainForm";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
