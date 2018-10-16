@@ -33,11 +33,5 @@ namespace PCBaam.GUI
            Findidfw aa = new Findidfw();
             aa.Show();
         }
-
-        private void SignUpButton_Click(object sender, EventArgs e)
-        {
-            SignUpForm signUp = new SignUpForm();
-            signUp.Show();
-        }
     }
 }
