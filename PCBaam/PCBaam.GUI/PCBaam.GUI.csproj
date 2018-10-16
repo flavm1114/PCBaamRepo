@@ -57,6 +57,12 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductOrder.Designer.cs">
+      <DependentUpon>ProductOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FindIdPw.resx">
@@ -64,6 +70,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductOrder.resx">
+      <DependentUpon>ProductOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -84,12 +93,40 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\치즈라면" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mainformscreen.jpg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\치즈라면.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chramen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sinramen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aggramen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cola.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welchs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icetea.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mandu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sider.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
