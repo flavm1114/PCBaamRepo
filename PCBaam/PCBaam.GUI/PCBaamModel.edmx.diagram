@@ -4,14 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="60731763598b4e44a564ff2fa0980062" Name="Diagram1">
-        <EntityTypeShape EntityType="PCBaamModels.Customer" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="PCBaamModels.Food" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="PCBaamModels.Foodlist" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="PCBaamModels.Order" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <AssociationConnector Association="PCBaamModels.FK_주문_회원1" ManuallyRouted="false" />
-        <AssociationConnector Association="PCBaamModels.FK_음식_음식종류" ManuallyRouted="false" />
-        <AssociationConnector Association="PCBaamModels.FK_주문_음식" ManuallyRouted="false" />
+      <Diagram DiagramId="72b54e662702471abcc2182375e6891f" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Customer" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Food" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Foodlist" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Order" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_주문_회원1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_음식_음식종류" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_주문_음식" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

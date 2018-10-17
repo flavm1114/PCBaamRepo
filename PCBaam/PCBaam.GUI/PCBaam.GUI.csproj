@@ -32,14 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
-      <HintPath>C:\Users\kccistc\Desktop\Bunifu UI WinForms 1.8.0.1\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
-      <HintPath>C:\Users\kccistc\Desktop\Bunifu UI WinForms 1.8.0.1\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>C:\Users\kccistc\Desktop\Bunifu UI WinForms 1.8.0.1\Bunifu_UI_v1.5.3.dll</HintPath>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\kccistc\Desktop\Bunifu_UI_v1.5.3\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -47,6 +42,7 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -130,11 +126,11 @@
     <EmbeddedResource Include="SignUpForm.resx">
       <DependentUpon>SignUpForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <EntityDeploy Include="PCBaamModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>PCBaamModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="packages.config" />
     <None Include="PCBaamModel.edmx.diagram">
       <DependentUpon>PCBaamModel.edmx</DependentUpon>
     </None>
@@ -158,10 +154,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PCBaam.Data\PCBaam.Data.csproj">
-      <Project>{d32b71c9-442d-4105-a1e5-c765fc326952}</Project>
-      <Name>PCBaam.Data</Name>
-    </ProjectReference>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="PCBaamModel.Context.tt">
@@ -174,9 +167,6 @@
       <DependentUpon>PCBaamModel.edmx</DependentUpon>
       <LastGenOutput>PCBaamModel.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

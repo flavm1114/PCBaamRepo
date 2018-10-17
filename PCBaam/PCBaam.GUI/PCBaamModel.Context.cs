@@ -13,10 +13,10 @@ namespace PCBaam.GUI
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class PC_Cafe_OrderEntities : DbContext
+    public partial class PC_Cafe_OrderEntities1 : DbContext
     {
-        public PC_Cafe_OrderEntities()
-            : base("name=PC_Cafe_OrderEntities")
+        public PC_Cafe_OrderEntities1()
+            : base("name=PC_Cafe_OrderEntities1")
         {
         }
     

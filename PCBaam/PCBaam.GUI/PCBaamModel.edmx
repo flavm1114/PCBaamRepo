@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PCBaamModels.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Customer">
           <Key>
             <PropertyRef Name="회원번호" />
@@ -15,7 +15,7 @@
           <Property Name="전화번호" Type="nvarchar" MaxLength="15" Nullable="false" />
           <Property Name="이메일" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="잔여시간" Type="int" Nullable="false" />
-          <Property Name="회원번호" Type="int" Nullable="false" />
+          <Property Name="회원번호" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
         <EntityType Name="Food">
           <Key>
@@ -79,7 +79,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="PCBaamModelsStoreContainer">
+        <EntityContainer Name="ModelStoreContainer">
           <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Food" EntityType="Self.Food" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Foodlist" EntityType="Self.Foodlist" Schema="dbo" store:Type="Tables" />
@@ -101,7 +101,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="PCBaamModels" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Customer">
           <Key>
             <PropertyRef Name="회원번호" />
@@ -112,7 +112,7 @@
           <Property Name="전화번호" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="이메일" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="잔여시간" Type="Int32" Nullable="false" />
-          <Property Name="회원번호" Type="Int32" Nullable="false" />
+          <Property Name="회원번호" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="Orders" Relationship="Self.FK_주문_회원1" FromRole="Customer" ToRole="Order" />
         </EntityType>
         <EntityType Name="Food">
@@ -182,7 +182,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="PC_Cafe_OrderEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="PC_Cafe_OrderEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Customers" EntityType="Self.Customer" />
           <EntitySet Name="Foods" EntityType="Self.Food" />
           <EntitySet Name="Foodlists" EntityType="Self.Foodlist" />
@@ -205,9 +205,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="PCBaamModelsStoreContainer" CdmEntityContainer="PC_Cafe_OrderEntities">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="PC_Cafe_OrderEntities1">
           <EntitySetMapping Name="Customers">
-            <EntityTypeMapping TypeName="PCBaamModels.Customer">
+            <EntityTypeMapping TypeName="Model.Customer">
               <MappingFragment StoreEntitySet="Customer">
                 <ScalarProperty Name="회원id" ColumnName="회원id" />
                 <ScalarProperty Name="성명" ColumnName="성명" />
@@ -220,7 +220,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Foods">
-            <EntityTypeMapping TypeName="PCBaamModels.Food">
+            <EntityTypeMapping TypeName="Model.Food">
               <MappingFragment StoreEntitySet="Food">
                 <ScalarProperty Name="음식id" ColumnName="음식id" />
                 <ScalarProperty Name="음식종류id" ColumnName="음식종류id" />
@@ -230,7 +230,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Foodlists">
-            <EntityTypeMapping TypeName="PCBaamModels.Foodlist">
+            <EntityTypeMapping TypeName="Model.Foodlist">
               <MappingFragment StoreEntitySet="Foodlist">
                 <ScalarProperty Name="음식종류id" ColumnName="음식종류id" />
                 <ScalarProperty Name="종류이름" ColumnName="종류이름" />
@@ -238,7 +238,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Orders">
-            <EntityTypeMapping TypeName="PCBaamModels.Order">
+            <EntityTypeMapping TypeName="Model.Order">
               <MappingFragment StoreEntitySet="Order">
                 <ScalarProperty Name="주문id" ColumnName="주문id" />
                 <ScalarProperty Name="음식id" ColumnName="음식id" />
