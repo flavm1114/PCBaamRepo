@@ -39,6 +39,18 @@ namespace PCBaam.GUI
 
             db.Customers.Add(newCustomer);
             db.SaveChanges();
+
+            if (idTextbox.Text == null)
+                MessageBox.Show("아이디를 입력하세요");
+            else if (pwTextbox.Text == null)
+                MessageBox.Show("패스워드를 입력하세요");
+            else if (nameTextbox.Text == null)
+                MessageBox.Show("이름을 입력하세요");
+            else if (cellnumTextbox.Text == null)
+                MessageBox.Show("전화번호를 입력하세요");
+            else if (mailTextbox.Text == null)
+                MessageBox.Show("이메일을 입력하세요");
+
         }
 
         private void cancelButton_Click(object sender, EventArgs e)

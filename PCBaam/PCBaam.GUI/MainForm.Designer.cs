@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ProductOrder = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.IDLabel = new System.Windows.Forms.Label();
@@ -37,7 +38,6 @@
             this.SignUpButton = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.ProductOrder = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +59,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(903, 459);
             this.panel1.TabIndex = 0;
+            // 
+            // ProductOrder
+            // 
+            this.ProductOrder.Location = new System.Drawing.Point(262, 201);
+            this.ProductOrder.Name = "ProductOrder";
+            this.ProductOrder.Size = new System.Drawing.Size(131, 67);
+            this.ProductOrder.TabIndex = 17;
+            this.ProductOrder.Text = "주문하기";
+            this.ProductOrder.UseVisualStyleBackColor = true;
+            this.ProductOrder.Click += new System.EventHandler(this.ProductOrder_Click);
             // 
             // ExitButton
             // 
@@ -143,6 +153,7 @@
             this.SignUpButton.TabIndex = 14;
             this.SignUpButton.Text = "회원가입";
             this.SignUpButton.UseVisualStyleBackColor = false;
+            this.SignUpButton.Click += new System.EventHandler(this.SignUpButton_Click_1);
             // 
             // textBox2
             // 
@@ -159,16 +170,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(153, 25);
             this.textBox1.TabIndex = 11;
-            // 
-            // ProductOrder
-            // 
-            this.ProductOrder.Location = new System.Drawing.Point(262, 201);
-            this.ProductOrder.Name = "ProductOrder";
-            this.ProductOrder.Size = new System.Drawing.Size(131, 67);
-            this.ProductOrder.TabIndex = 17;
-            this.ProductOrder.Text = "주문하기";
-            this.ProductOrder.UseVisualStyleBackColor = true;
-            this.ProductOrder.Click += new System.EventHandler(this.ProductOrder_Click);
             // 
             // MainForm
             // 

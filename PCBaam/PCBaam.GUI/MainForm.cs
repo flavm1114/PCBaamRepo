@@ -36,6 +36,16 @@ namespace PCBaam.GUI
 
         private void SignUpButton_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void ProductOrder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SignUpButton_Click_1(object sender, EventArgs e)
+        {
             SignUpForm siginUp = new SignUpForm();
             siginUp.Show();
         }

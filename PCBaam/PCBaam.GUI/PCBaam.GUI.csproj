@@ -51,6 +51,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -63,17 +64,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customer.cs">
+      <DependentUpon>PCBaamModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="FindIdPw.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FindIdPw.Designer.cs">
       <DependentUpon>FindIdPw.cs</DependentUpon>
     </Compile>
+    <Compile Include="Food.cs">
+      <DependentUpon>PCBaamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Foodlist.cs">
+      <DependentUpon>PCBaamModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>PCBaamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PCBaamModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PCBaamModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PCBaamModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PCBaamModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PCBaamModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PCBaamModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,6 +131,13 @@
       <DependentUpon>SignUpForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <EntityDeploy Include="PCBaamModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PCBaamModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="PCBaamModel.edmx.diagram">
+      <DependentUpon>PCBaamModel.edmx</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -127,6 +162,21 @@
       <Project>{d32b71c9-442d-4105-a1e5-c765fc326952}</Project>
       <Name>PCBaam.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PCBaamModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PCBaamModel.Context.cs</LastGenOutput>
+      <DependentUpon>PCBaamModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="PCBaamModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PCBaamModel.edmx</DependentUpon>
+      <LastGenOutput>PCBaamModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

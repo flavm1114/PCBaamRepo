@@ -11,15 +11,15 @@ namespace PCBaam.CUI
     {
         static void Main(string[] args)
         {
-//            PC_Cafe_OrderEntities context = new PC_Cafe_OrderEntities();
-//
-//            List<Customer> customers = context.Customers.ToList();
-//
-//            foreach (var x in customers)
-//            {
-//                Console.WriteLine(x.회원id);
-//                Console.WriteLine(x.패스워드);
-//            }
+            PC_Cafe_OrderEntities context = new PC_Cafe_OrderEntities();
+
+            List<Customer> customers = context.Customers.ToList();
+
+            foreach (var x in customers)
+            {
+                Console.WriteLine(x.회원id);
+                Console.WriteLine(x.패스워드);
+            }
         }
     }
 }
