@@ -48,15 +48,7 @@ namespace PCBaam.GUI
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-//            SqlConnection connection = CreateAndOpenConnection();
-//            connection.Open();
-//
-//            SqlCommand command = new SqlCommand();
-//
-//            command.CommandText = "select 회원id from Customer";
-//            command.CommandType = CommandType.Text;
-//            command.Connection = connection;
-            PC_Cafe_OrderEntities1 context = new PC_Cafe_OrderEntities1();
+           PC_Cafe_OrderEntities1 context = new PC_Cafe_OrderEntities1();
 
             List<Customer> customers = context.Customers.ToList();
 
@@ -65,25 +57,15 @@ namespace PCBaam.GUI
                 if (x.회원id == idTextbox.Text && x.패스워드 == pwTextbox.Text)
                 {
                     OrderForm orderForm = new OrderForm();
-                    
+
                     orderForm.Show();
                 }
-                else if(x.회원id != idTextbox.Text && x.패스워드 != pwTextbox.Text)
+                else if (x.회원id != idTextbox.Text != true)
                 {
                     MessageBox.Show("아이디와 패스워드를 확인하세요");
                     break;
                 }
             }
         }
-
-//        private static SqlConnection CreateAndOpenConnection()
-//        {
-//            SqlConnection connection = new SqlConnection();
-//            connection.ConnectionString = @"server=10.10.14.55\MSSQLSERVER,1433; database=PC_Cafe Order;uid=sa;pwd=1234";
-//            connection.Open();
-//
-//            return connection;
-//        }
-
     }
 }

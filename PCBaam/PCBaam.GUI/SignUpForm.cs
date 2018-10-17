@@ -60,8 +60,7 @@ namespace PCBaam.GUI
             newCustomer.이메일 = mailTextbox.Text;
             newCustomer.잔여시간 = 0;
             //newCustomer.회원번호 = 100;
-
-
+            
             db.Customers.Add(newCustomer);
             db.SaveChanges();
         }
