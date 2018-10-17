@@ -38,16 +38,25 @@ namespace PCBaam.GUI
         {
             
         }
-
-        private void ProductOrder_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void SignUpButton_Click_1(object sender, EventArgs e)
         {
             SignUpForm siginUp = new SignUpForm();
             siginUp.Show();
+        }
+
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+            //Select();
+            //MessageBox.Show("로그인 클릭됐어용");
+            Customer customer = new Customer();
+            MessageBox.Show("데이터베이스" + customer.회원id);
+            MessageBox.Show("로그인화면"+ idTextbox.Text);
+
+//            if (customer.회원id == idTextbox.Text && customer.패스워드 == pwTextbox.Text)
+//            {
+//                MessageBox.Show("로그인 완료");
+//            }
         }
     }
 }

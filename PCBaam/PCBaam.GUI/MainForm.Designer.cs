@@ -29,15 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ProductOrder = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.loginButton = new System.Windows.Forms.Button();
             this.IDLabel = new System.Windows.Forms.Label();
             this.FindIdPw = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SignUpButton = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pwTextbox = new System.Windows.Forms.TextBox();
+            this.idTextbox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,30 +44,19 @@
             // 
             this.panel1.BackgroundImage = global::PCBaam.GUI.Properties.Resources.mainformscreen_jpg;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.ProductOrder);
             this.panel1.Controls.Add(this.ExitButton);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.loginButton);
             this.panel1.Controls.Add(this.IDLabel);
             this.panel1.Controls.Add(this.FindIdPw);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.SignUpButton);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.pwTextbox);
+            this.panel1.Controls.Add(this.idTextbox);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(903, 459);
             this.panel1.TabIndex = 0;
-            // 
-            // ProductOrder
-            // 
-            this.ProductOrder.Location = new System.Drawing.Point(262, 201);
-            this.ProductOrder.Name = "ProductOrder";
-            this.ProductOrder.Size = new System.Drawing.Size(131, 67);
-            this.ProductOrder.TabIndex = 17;
-            this.ProductOrder.Text = "주문하기";
-            this.ProductOrder.UseVisualStyleBackColor = true;
-            this.ProductOrder.Click += new System.EventHandler(this.ProductOrder_Click);
             // 
             // ExitButton
             // 
@@ -84,20 +72,21 @@
             this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // button1
+            // loginButton
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.button1.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.button1.Location = new System.Drawing.Point(756, 288);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 96);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "로그인";
-            this.button1.UseVisualStyleBackColor = false;
+            this.loginButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.loginButton.BackColor = System.Drawing.Color.Black;
+            this.loginButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.loginButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.loginButton.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.loginButton.ForeColor = System.Drawing.Color.LavenderBlush;
+            this.loginButton.Location = new System.Drawing.Point(756, 288);
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Size = new System.Drawing.Size(118, 96);
+            this.loginButton.TabIndex = 13;
+            this.loginButton.Text = "로그인";
+            this.loginButton.UseVisualStyleBackColor = false;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // IDLabel
             // 
@@ -155,21 +144,21 @@
             this.SignUpButton.UseVisualStyleBackColor = false;
             this.SignUpButton.Click += new System.EventHandler(this.SignUpButton_Click_1);
             // 
-            // textBox2
+            // pwTextbox
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(597, 342);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(153, 25);
-            this.textBox2.TabIndex = 12;
+            this.pwTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pwTextbox.Location = new System.Drawing.Point(597, 342);
+            this.pwTextbox.Name = "pwTextbox";
+            this.pwTextbox.Size = new System.Drawing.Size(153, 25);
+            this.pwTextbox.TabIndex = 12;
             // 
-            // textBox1
+            // idTextbox
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(597, 300);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(153, 25);
-            this.textBox1.TabIndex = 11;
+            this.idTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.idTextbox.Location = new System.Drawing.Point(597, 300);
+            this.idTextbox.Name = "idTextbox";
+            this.idTextbox.Size = new System.Drawing.Size(153, 25);
+            this.idTextbox.TabIndex = 11;
             // 
             // MainForm
             // 
@@ -178,7 +167,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(903, 459);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainForm";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -193,14 +182,13 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button ExitButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Label IDLabel;
         private System.Windows.Forms.Button FindIdPw;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button SignUpButton;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button ProductOrder;
+        private System.Windows.Forms.TextBox pwTextbox;
+        private System.Windows.Forms.TextBox idTextbox;
     }
 }
 
