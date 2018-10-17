@@ -14,9 +14,7 @@ namespace PCBaam.GUI
     public partial class MainForm : Form
     {
         public MainForm()
-        {
-            int a;
-            int b;
+        { 
             InitializeComponent();
         }
 

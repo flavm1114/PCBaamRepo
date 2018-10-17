@@ -32,11 +32,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelRight = new System.Windows.Forms.Panel();
-            this.mailTextbox = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.cellphoneTextbox = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.nameTextbox = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.pwTextbox = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.idTextbox = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.cancelButton = new System.Windows.Forms.Button();
             this.okButton = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -45,6 +40,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.idTextbox = new System.Windows.Forms.TextBox();
+            this.pwTextbox = new System.Windows.Forms.TextBox();
+            this.nameTextbox = new System.Windows.Forms.TextBox();
+            this.cellphoneTextbox = new System.Windows.Forms.TextBox();
+            this.mailTextbox = new System.Windows.Forms.TextBox();
             this.panelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelRight.SuspendLayout();
@@ -101,107 +101,6 @@
             this.panelRight.Name = "panelRight";
             this.panelRight.Size = new System.Drawing.Size(485, 590);
             this.panelRight.TabIndex = 1;
-            // 
-            // mailTextbox
-            // 
-            this.mailTextbox.BackColor = System.Drawing.SystemColors.Control;
-            this.mailTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.mailTextbox.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.mailTextbox.ForeColor = System.Drawing.Color.Transparent;
-            this.mailTextbox.HintForeColor = System.Drawing.Color.Black;
-            this.mailTextbox.HintText = "ex)aaa@gmail.com";
-            this.mailTextbox.isPassword = false;
-            this.mailTextbox.LineFocusedColor = System.Drawing.Color.OliveDrab;
-            this.mailTextbox.LineIdleColor = System.Drawing.Color.OliveDrab;
-            this.mailTextbox.LineMouseHoverColor = System.Drawing.Color.OliveDrab;
-            this.mailTextbox.LineThickness = 3;
-            this.mailTextbox.Location = new System.Drawing.Point(32, 420);
-            this.mailTextbox.Margin = new System.Windows.Forms.Padding(4);
-            this.mailTextbox.Name = "mailTextbox";
-            this.mailTextbox.Size = new System.Drawing.Size(379, 33);
-            this.mailTextbox.TabIndex = 20;
-            this.mailTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // cellphoneTextbox
-            // 
-            this.cellphoneTextbox.BackColor = System.Drawing.SystemColors.Control;
-            this.cellphoneTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.cellphoneTextbox.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.cellphoneTextbox.ForeColor = System.Drawing.Color.Transparent;
-            this.cellphoneTextbox.HintForeColor = System.Drawing.Color.Black;
-            this.cellphoneTextbox.HintText = "숫자만 입력해주세요";
-            this.cellphoneTextbox.isPassword = false;
-            this.cellphoneTextbox.LineFocusedColor = System.Drawing.Color.OliveDrab;
-            this.cellphoneTextbox.LineIdleColor = System.Drawing.Color.OliveDrab;
-            this.cellphoneTextbox.LineMouseHoverColor = System.Drawing.Color.OliveDrab;
-            this.cellphoneTextbox.LineThickness = 3;
-            this.cellphoneTextbox.Location = new System.Drawing.Point(32, 345);
-            this.cellphoneTextbox.Margin = new System.Windows.Forms.Padding(4);
-            this.cellphoneTextbox.Name = "cellphoneTextbox";
-            this.cellphoneTextbox.Size = new System.Drawing.Size(379, 33);
-            this.cellphoneTextbox.TabIndex = 19;
-            this.cellphoneTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // nameTextbox
-            // 
-            this.nameTextbox.BackColor = System.Drawing.SystemColors.Control;
-            this.nameTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nameTextbox.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.nameTextbox.ForeColor = System.Drawing.Color.Transparent;
-            this.nameTextbox.HintForeColor = System.Drawing.Color.Black;
-            this.nameTextbox.HintText = "ex)홍길동";
-            this.nameTextbox.isPassword = false;
-            this.nameTextbox.LineFocusedColor = System.Drawing.Color.OliveDrab;
-            this.nameTextbox.LineIdleColor = System.Drawing.Color.OliveDrab;
-            this.nameTextbox.LineMouseHoverColor = System.Drawing.Color.OliveDrab;
-            this.nameTextbox.LineThickness = 3;
-            this.nameTextbox.Location = new System.Drawing.Point(32, 268);
-            this.nameTextbox.Margin = new System.Windows.Forms.Padding(4);
-            this.nameTextbox.Name = "nameTextbox";
-            this.nameTextbox.Size = new System.Drawing.Size(379, 33);
-            this.nameTextbox.TabIndex = 18;
-            this.nameTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // pwTextbox
-            // 
-            this.pwTextbox.BackColor = System.Drawing.SystemColors.Control;
-            this.pwTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.pwTextbox.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.pwTextbox.ForeColor = System.Drawing.Color.Transparent;
-            this.pwTextbox.HintForeColor = System.Drawing.Color.Black;
-            this.pwTextbox.HintText = "비밀번호를 입력하세요";
-            this.pwTextbox.isPassword = true;
-            this.pwTextbox.LineFocusedColor = System.Drawing.Color.OliveDrab;
-            this.pwTextbox.LineIdleColor = System.Drawing.Color.OliveDrab;
-            this.pwTextbox.LineMouseHoverColor = System.Drawing.Color.OliveDrab;
-            this.pwTextbox.LineThickness = 3;
-            this.pwTextbox.Location = new System.Drawing.Point(32, 195);
-            this.pwTextbox.Margin = new System.Windows.Forms.Padding(4);
-            this.pwTextbox.Name = "pwTextbox";
-            this.pwTextbox.Size = new System.Drawing.Size(379, 33);
-            this.pwTextbox.TabIndex = 17;
-            this.pwTextbox.Text = "bunifuMaterialTextbox2";
-            this.pwTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // idTextbox
-            // 
-            this.idTextbox.BackColor = System.Drawing.SystemColors.Control;
-            this.idTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.idTextbox.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.idTextbox.ForeColor = System.Drawing.Color.Transparent;
-            this.idTextbox.HintForeColor = System.Drawing.Color.Black;
-            this.idTextbox.HintText = "아이디를 입력하세요";
-            this.idTextbox.isPassword = false;
-            this.idTextbox.LineFocusedColor = System.Drawing.Color.OliveDrab;
-            this.idTextbox.LineIdleColor = System.Drawing.Color.OliveDrab;
-            this.idTextbox.LineMouseHoverColor = System.Drawing.Color.OliveDrab;
-            this.idTextbox.LineThickness = 3;
-            this.idTextbox.Location = new System.Drawing.Point(32, 121);
-            this.idTextbox.Margin = new System.Windows.Forms.Padding(4);
-            this.idTextbox.Name = "idTextbox";
-            this.idTextbox.Size = new System.Drawing.Size(379, 33);
-            this.idTextbox.TabIndex = 16;
-            this.idTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // cancelButton
             // 
@@ -304,6 +203,46 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "회원가입";
             // 
+            // idTextbox
+            // 
+            this.idTextbox.Font = new System.Drawing.Font("한컴 윤체 B", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.idTextbox.Location = new System.Drawing.Point(32, 121);
+            this.idTextbox.Name = "idTextbox";
+            this.idTextbox.Size = new System.Drawing.Size(425, 35);
+            this.idTextbox.TabIndex = 16;
+            // 
+            // pwTextbox
+            // 
+            this.pwTextbox.Font = new System.Drawing.Font("한컴 윤체 B", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.pwTextbox.Location = new System.Drawing.Point(32, 194);
+            this.pwTextbox.Name = "pwTextbox";
+            this.pwTextbox.Size = new System.Drawing.Size(425, 35);
+            this.pwTextbox.TabIndex = 17;
+            // 
+            // nameTextbox
+            // 
+            this.nameTextbox.Font = new System.Drawing.Font("한컴 윤체 B", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.nameTextbox.Location = new System.Drawing.Point(32, 267);
+            this.nameTextbox.Name = "nameTextbox";
+            this.nameTextbox.Size = new System.Drawing.Size(425, 35);
+            this.nameTextbox.TabIndex = 18;
+            // 
+            // cellphoneTextbox
+            // 
+            this.cellphoneTextbox.Font = new System.Drawing.Font("한컴 윤체 B", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cellphoneTextbox.Location = new System.Drawing.Point(32, 344);
+            this.cellphoneTextbox.Name = "cellphoneTextbox";
+            this.cellphoneTextbox.Size = new System.Drawing.Size(425, 35);
+            this.cellphoneTextbox.TabIndex = 19;
+            // 
+            // mailTextbox
+            // 
+            this.mailTextbox.Font = new System.Drawing.Font("한컴 윤체 B", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.mailTextbox.Location = new System.Drawing.Point(32, 419);
+            this.mailTextbox.Name = "mailTextbox";
+            this.mailTextbox.Size = new System.Drawing.Size(425, 35);
+            this.mailTextbox.TabIndex = 20;
+            // 
             // SignUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -344,10 +283,10 @@
         //private Bunifu.Framework.UI.BunifuMaterialTextbox nameTextbox;
         //private Bunifu.Framework.UI.BunifuMaterialTextbox pwTextbox;
         private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox mailTextbox;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox cellphoneTextbox;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox nameTextbox;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox pwTextbox;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox idTextbox;
+        private System.Windows.Forms.TextBox mailTextbox;
+        private System.Windows.Forms.TextBox cellphoneTextbox;
+        private System.Windows.Forms.TextBox nameTextbox;
+        private System.Windows.Forms.TextBox pwTextbox;
+        private System.Windows.Forms.TextBox idTextbox;
     }
 }
