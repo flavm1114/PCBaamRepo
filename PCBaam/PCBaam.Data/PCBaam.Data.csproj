@@ -54,15 +54,19 @@
     <Compile Include="Customer.cs">
       <DependentUpon>PCBaamModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="CustomerData.cs" />
+    <Compile Include="EntityData.cs" />
     <Compile Include="Food.cs">
       <DependentUpon>PCBaamModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="FoodData.cs" />
     <Compile Include="Foodlist.cs">
       <DependentUpon>PCBaamModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Order.cs">
       <DependentUpon>PCBaamModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="OrderData.cs" />
     <Compile Include="PCBaamModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

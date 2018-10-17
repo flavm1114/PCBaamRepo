@@ -141,6 +141,7 @@
             this.SignUpButton.TabIndex = 14;
             this.SignUpButton.Text = "회원가입";
             this.SignUpButton.UseVisualStyleBackColor = false;
+            this.SignUpButton.Click += new System.EventHandler(this.SignUpButton_Click);
             // 
             // textBox2
             // 
@@ -158,7 +159,7 @@
             this.textBox1.Size = new System.Drawing.Size(153, 25);
             this.textBox1.TabIndex = 11;
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -166,7 +167,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
