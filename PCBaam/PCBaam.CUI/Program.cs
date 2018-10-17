@@ -11,6 +11,8 @@ namespace PCBaam.CUI
     {
         static void Main(string[] args)
         {
+            int aaaaa;
+
             PC_Cafe_OrderEntities context = new PC_Cafe_OrderEntities();
 
             List<Customer> customers = context.Customers.ToList();
