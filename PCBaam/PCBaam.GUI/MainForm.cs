@@ -17,6 +17,7 @@ namespace PCBaam.GUI
         {
             int a;
             int b;
+            int c;s
             InitializeComponent();
         }
 
