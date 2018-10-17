@@ -16,6 +16,7 @@ namespace PCBaam.GUI
         public MainForm()
         {
             int a;
+            int b;
             InitializeComponent();
         }
 
