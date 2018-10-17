@@ -33,5 +33,11 @@ namespace PCBaam.GUI
            Findidfw aa = new Findidfw();
             aa.Show();
         }
+
+        private void ProductOrder_Click(object sender, EventArgs e)
+        {
+            ProductOrder PO = new ProductOrder();
+            PO.Show();
+        }
     }
 }

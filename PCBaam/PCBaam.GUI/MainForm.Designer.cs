@@ -37,13 +37,15 @@
             this.SignUpButton = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ProductOrder = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = global::PCBaam.GUI.Properties.Resources.mainformscreen_jpg1;
+            this.panel1.BackgroundImage = global::PCBaam.GUI.Properties.Resources.mainformscreen_jpg;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.ProductOrder);
             this.panel1.Controls.Add(this.ExitButton);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.IDLabel);
@@ -158,6 +160,16 @@
             this.textBox1.Size = new System.Drawing.Size(153, 25);
             this.textBox1.TabIndex = 11;
             // 
+            // ProductOrder
+            // 
+            this.ProductOrder.Location = new System.Drawing.Point(262, 201);
+            this.ProductOrder.Name = "ProductOrder";
+            this.ProductOrder.Size = new System.Drawing.Size(131, 67);
+            this.ProductOrder.TabIndex = 17;
+            this.ProductOrder.Text = "주문하기";
+            this.ProductOrder.UseVisualStyleBackColor = true;
+            this.ProductOrder.Click += new System.EventHandler(this.ProductOrder_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -187,6 +199,7 @@
         private System.Windows.Forms.Button SignUpButton;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button ProductOrder;
     }
 }
 

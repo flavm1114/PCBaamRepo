@@ -103,9 +103,9 @@ namespace PCBaam.GUI.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap mainformscreen_jpg1 {
+        internal static System.Drawing.Bitmap mainformscreen_jpg {
             get {
-                object obj = ResourceManager.GetObject("mainformscreen.jpg1", resourceCulture);
+                object obj = ResourceManager.GetObject("mainformscreen.jpg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

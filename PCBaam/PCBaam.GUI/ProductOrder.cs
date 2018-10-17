@@ -37,11 +37,6 @@ namespace PCBaam.GUI
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            checkedListBox1.ContextMenu
-        }
-
         private void ramen_Click(object sender, EventArgs e)
         {
 
