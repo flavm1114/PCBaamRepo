@@ -10,7 +10,7 @@ namespace PCBaam.CUI
     class Program
     {
         static void Main(string[] args)
-        {
+        { 
             PC_Cafe_OrderEntities context = new PC_Cafe_OrderEntities();
 
             List<Customer> customers = context.Customers.ToList();
