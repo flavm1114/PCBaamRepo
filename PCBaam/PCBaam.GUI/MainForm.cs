@@ -17,13 +17,12 @@ namespace PCBaam.GUI
         {
             int a;
             int b;
-            int c;s
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            int c;
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
