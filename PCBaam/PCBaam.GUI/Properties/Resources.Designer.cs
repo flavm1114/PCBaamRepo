@@ -103,6 +103,16 @@ namespace PCBaam.GUI.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap jjapa {
+            get {
+                object obj = ResourceManager.GetObject("jjapa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap mainformscreen_jpg {
             get {
                 object obj = ResourceManager.GetObject("mainformscreen.jpg", resourceCulture);
@@ -116,6 +126,16 @@ namespace PCBaam.GUI.Properties {
         internal static System.Drawing.Bitmap mandu {
             get {
                 object obj = ResourceManager.GetObject("mandu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap nengcharm {
+            get {
+                object obj = ResourceManager.GetObject("nengcharm", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

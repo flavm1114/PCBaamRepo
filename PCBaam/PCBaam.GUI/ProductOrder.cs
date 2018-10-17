@@ -55,5 +55,10 @@ namespace PCBaam.GUI
         {
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
