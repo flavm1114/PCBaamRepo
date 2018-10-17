@@ -14,39 +14,37 @@ namespace PCBaam.GUI
     public partial class SignUpForm : Form
     {
         private PC_Cafe_OrderEntities1 db;
-        
 
         public SignUpForm()
         {
             InitializeComponent();
         }
-        private void SignUpForm_Load(object sender, EventArgs e)
 
+        private void SignUpForm_Load(object sender, EventArgs e)
         {
-            //db = new PC_Cafe_OrderEntities1();
-            
+            db = new PC_Cafe_OrderEntities1();
+
         }
 
         private void okButton_Click(object sender, EventArgs e)
         {
             Insert();
-            
-            if (idTextbox.Text == null)
-                MessageBox.Show("아이디를 입력하세요");
-            else if (pwTextbox.Text == null)
+
+            if (idTextbox.Text == string.Empty)
+                MessageBox.Show("아이디를 중복검사 하세요");
+            else if (pwTextbox.Text == string.Empty)
                 MessageBox.Show("패스워드를 입력하세요");
-            else if (nameTextbox.Text == null)
+            else if (nameTextbox.Text == string.Empty)
                 MessageBox.Show("이름을 입력하세요");
-            else if (cellphoneTextbox.Text == null)
-                MessageBox.Show("전화번호를 입력하세요");
-            else if (mailTextbox.Text == null)
-                MessageBox.Show("이메일을 입력하세요");
+            else if (cellphoneTextbox.Text == string.Empty)
+                MessageBox.Show("휴대폰 번호를 입력하세요");
+            else if (mailTextbox.Text == string.Empty)
+                MessageBox.Show("메일을 입력하세요");
             else
             {
-                MessageBox.Show("가입이 완료 되었습니다");
-                this.Close();
+                MessageBox.Show("회원가입에 성공하였습니다");
             }
-            
+
         }
 
         private void Insert()
@@ -70,5 +68,28 @@ namespace PCBaam.GUI
         {
             this.Close();
         }
+
+
+        private void CheckButton_Click(object sender, EventArgs e)
+        {
+            db = new PC_Cafe_OrderEntities1();
+
+            List<Customer> customers = db.Customers.ToList();
+
+            foreach (var x in customers)
+            {
+                if (x.회원id.Equals(idTextbox.Text))
+                {
+                    MessageBox.Show("아이디가 중복 되용");
+                    break;
+                }
+                else
+                {
+                    MessageBox.Show("사용가능한 아이디 입니다");
+                    break;
+                }
+            }
+        }
+
     }
 }

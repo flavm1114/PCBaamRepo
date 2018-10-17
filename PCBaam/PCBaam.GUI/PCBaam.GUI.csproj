@@ -172,6 +172,7 @@
       <DependentUpon>PCBaamModel.edmx</DependentUpon>
       <LastGenOutput>PCBaamModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\회원가입.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
