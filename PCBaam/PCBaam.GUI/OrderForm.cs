@@ -46,7 +46,7 @@ namespace PCBaam.GUI
             bool isExist = false;
             int selectedIndex = 0;
 
-            
+
 
             foreach (ListViewItem x in orderList.Items)
             {
@@ -69,7 +69,7 @@ namespace PCBaam.GUI
                 orderList.Items[selectedIndex].SubItems[1].Text = (price + item.Price).ToString();
             }
             else
-            { 
+            {
                 ListViewItem listitem = new ListViewItem(item.FoodName);
                 listitem.SubItems.Add(item.Price.ToString());
                 listitem.SubItems.Add("1");
@@ -78,7 +78,7 @@ namespace PCBaam.GUI
                 PC_Cafe_OrderEntities1 context = new PC_Cafe_OrderEntities1();
 
                 var query = from x in context.Foods
-                    where x.음식이름 == item.FoodName
+                            where x.음식이름 == item.FoodName
                             select x.음식id;
                 foodIdList.Add(query.ToList()[0]);
             }
