@@ -11,5 +11,7 @@ namespace PCBaam.GUI.Models
         public string FoodName { get; set; }
 
         public int Price { get; set; }
+
+        
     }
 }
