@@ -13,6 +13,9 @@ namespace PCBaam.GUI
 {
     public partial class OrderForm : Form
     {
+
+        List<int> foodIdList = new List<int>();
+
         public OrderForm()
         {
             InitializeComponent();
@@ -43,6 +46,8 @@ namespace PCBaam.GUI
             bool isExist = false;
             int selectedIndex = 0;
 
+            
+
             foreach (ListViewItem x in orderList.Items)
             {
                 if (item.FoodName == x.Text)
@@ -64,11 +69,18 @@ namespace PCBaam.GUI
                 orderList.Items[selectedIndex].SubItems[1].Text = (price + item.Price).ToString();
             }
             else
-            {
+            { 
                 ListViewItem listitem = new ListViewItem(item.FoodName);
                 listitem.SubItems.Add(item.Price.ToString());
                 listitem.SubItems.Add("1");
                 orderList.Items.Add(listitem);
+
+                PC_Cafe_OrderEntities1 context = new PC_Cafe_OrderEntities1();
+
+                var query = from x in context.Foods
+                    where x.음식이름 == item.FoodName
+                            select x.음식id;
+                foodIdList.Add(query.ToList()[0]);
             }
 
             int sum = 0;
@@ -82,7 +94,7 @@ namespace PCBaam.GUI
 
         private void orderListView_DoubleClickToRemove(object sender, EventArgs e)
         {
-//            MessageBox.Show("더블클릭");
+            //            MessageBox.Show("더블클릭");
             foreach (ListViewItem x in orderList.Items)
             {
                 if (orderList.SelectedItems.Count > 0)
@@ -90,7 +102,30 @@ namespace PCBaam.GUI
                     orderList.Items.RemoveAt(x.Index);
                 }
             }
-            
+
+        }
+
+        private void OrderOkButton_Click(object sender, EventArgs e)
+        {
+            PC_Cafe_OrderEntities1 context = new PC_Cafe_OrderEntities1();
+
+            int a = 0;
+            foreach (ListViewItem x in orderList.Items)
+            {
+                Order order = new Order();
+
+                order.수량 = int.Parse(x.SubItems[2].Text);
+                order.음식id = foodIdList[a];
+                a++;
+                order.회원번호 = LoginInfo.customerNumber;
+                order.주문날짜시간 = DateTime.Now;
+
+                context.Orders.Add(order);
+            }
+            context.SaveChanges();
+            foodIdList.Clear();
+            orderList.Items.Clear();
+            MessageBox.Show("주문이 완료되었습니다!!");
         }
     }
 }

@@ -58,6 +58,9 @@ namespace PCBaam.GUI
                 {
                     OrderForm orderForm = new OrderForm();
 
+                    LoginInfo.loginId = x.회원id;
+                    LoginInfo.customerNumber = x.회원번호;
+
                     orderForm.Show();
                 }
                 else if (x.회원id != idTextbox.Text != true)

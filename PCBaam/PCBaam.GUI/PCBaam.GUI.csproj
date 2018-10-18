@@ -71,6 +71,7 @@
     <Compile Include="Foodlist.cs">
       <DependentUpon>PCBaamModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="LoginInfo.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

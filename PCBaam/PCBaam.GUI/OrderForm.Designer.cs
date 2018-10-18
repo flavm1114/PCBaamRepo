@@ -40,10 +40,13 @@
             this.Count = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.foodNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.foodBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.OrderOkButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -65,6 +68,9 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.OrderOkButton);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.totalPrice);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.panel2);
@@ -79,9 +85,10 @@
             // 
             // totalPrice
             // 
+            this.totalPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.totalPrice.AutoSize = true;
             this.totalPrice.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.totalPrice.Location = new System.Drawing.Point(676, 289);
+            this.totalPrice.Location = new System.Drawing.Point(676, 326);
             this.totalPrice.Name = "totalPrice";
             this.totalPrice.Size = new System.Drawing.Size(42, 20);
             this.totalPrice.TabIndex = 3;
@@ -89,9 +96,10 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(580, 289);
+            this.label1.Location = new System.Drawing.Point(580, 326);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 20);
             this.label1.TabIndex = 2;
@@ -100,7 +108,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.orderList);
-            this.panel2.Location = new System.Drawing.Point(300, 7);
+            this.panel2.Location = new System.Drawing.Point(300, 44);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(274, 302);
             this.panel2.TabIndex = 1;
@@ -123,12 +131,12 @@
             // foodnameHeader
             // 
             this.foodnameHeader.Text = "음식이름";
-            this.foodnameHeader.Width = 107;
+            this.foodnameHeader.Width = 103;
             // 
             // priceHeader
             // 
             this.priceHeader.Text = "가격";
-            this.priceHeader.Width = 102;
+            this.priceHeader.Width = 90;
             // 
             // Count
             // 
@@ -137,7 +145,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(8, 6);
+            this.panel1.Location = new System.Drawing.Point(8, 44);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(263, 303);
             this.panel1.TabIndex = 0;
@@ -163,6 +171,16 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(851, 421);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // foodNameDataGridViewTextBoxColumn
             // 
             this.foodNameDataGridViewTextBoxColumn.DataPropertyName = "FoodName";
@@ -181,15 +199,37 @@
             // 
             this.foodBindingSource.DataSource = typeof(PCBaam.GUI.Models.FoodReportItem);
             // 
-            // tabPage2
+            // label2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(851, 421);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("함초롬바탕 확장", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(8, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 27);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "상품목록";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("함초롬바탕 확장", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(295, 14);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 27);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "장바구니";
+            // 
+            // OrderOkButton
+            // 
+            this.OrderOkButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.OrderOkButton.Font = new System.Drawing.Font("휴먼모음T", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.OrderOkButton.Location = new System.Drawing.Point(584, 365);
+            this.OrderOkButton.Name = "OrderOkButton";
+            this.OrderOkButton.Size = new System.Drawing.Size(259, 37);
+            this.OrderOkButton.TabIndex = 6;
+            this.OrderOkButton.Text = "주문하기";
+            this.OrderOkButton.UseVisualStyleBackColor = true;
+            this.OrderOkButton.Click += new System.EventHandler(this.OrderOkButton_Click);
             // 
             // OrderForm
             // 
@@ -232,5 +272,8 @@
         public System.Windows.Forms.ColumnHeader Count;
         private System.Windows.Forms.Label totalPrice;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button OrderOkButton;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }
