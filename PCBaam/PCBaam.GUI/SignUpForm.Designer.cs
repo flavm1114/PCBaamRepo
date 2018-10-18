@@ -141,7 +141,7 @@
             this.idTextbox.Name = "idTextbox";
             this.idTextbox.Size = new System.Drawing.Size(251, 30);
             this.idTextbox.TabIndex = 16;
-            this.idTextbox.TextChanged += new System.EventHandler(this.idTextbox_TextChanged);
+//            this.idTextbox.TextChanged += new System.EventHandler(this.idTextbox_TextChanged);
             // 
             // cancelButton
             // 

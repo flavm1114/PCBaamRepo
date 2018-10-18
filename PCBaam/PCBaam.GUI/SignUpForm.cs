@@ -75,19 +75,25 @@ namespace PCBaam.GUI
 
             List<Customer> customers = db.Customers.ToList();
 
-            foreach (var x in customers)
+            bool isSame = false;
+            foreach (var customer in customers)
             {
-                if (x.회원id.Equals(idTextbox.Text))
+                if (customer.회원id.Equals(idTextbox.Text) == true)
                 {
-                    MessageBox.Show("아이디가 중복 되용");
-                    break;
-                }
-                else
-                {
-                    MessageBox.Show("사용가능한 아이디 입니다");
+                    isSame = true;
                     break;
                 }
             }
+
+            if (isSame == true)
+            {
+                MessageBox.Show("아이디 중복입니다!");
+            }
+            else
+            {
+                MessageBox.Show("사용가능한 아이디입니다!");
+            }
+
         }
 
     }
