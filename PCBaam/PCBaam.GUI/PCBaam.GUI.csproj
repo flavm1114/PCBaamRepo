@@ -45,6 +45,7 @@
     <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -78,10 +79,12 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\ChartItem.cs" />
     <Compile Include="Models\FoodReportItem.cs" />
     <Compile Include="Order.cs">
       <DependentUpon>PCBaamModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="OrderChartItem.cs" />
     <Compile Include="OrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +145,7 @@
       <DependentUpon>PCBaamModel.edmx</DependentUpon>
     </None>
     <None Include="Properties\DataSources\Food.datasource" />
+    <None Include="Properties\DataSources\PCBaam.GUI.Models.ChartItem.datasource" />
     <None Include="Properties\DataSources\PCBaam.GUI.Models.FoodReportItem.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

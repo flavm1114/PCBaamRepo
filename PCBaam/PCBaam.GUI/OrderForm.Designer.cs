@@ -29,8 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.OrderOkButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.totalPrice = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -40,19 +46,26 @@
             this.Count = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.foodNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.foodBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.OrderOkButton = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.chartButton = new System.Windows.Forms.Button();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.foodNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.countDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.foodBindingSource)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -82,6 +95,38 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // OrderOkButton
+            // 
+            this.OrderOkButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.OrderOkButton.Font = new System.Drawing.Font("휴먼모음T", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.OrderOkButton.Location = new System.Drawing.Point(584, 365);
+            this.OrderOkButton.Name = "OrderOkButton";
+            this.OrderOkButton.Size = new System.Drawing.Size(259, 37);
+            this.OrderOkButton.TabIndex = 6;
+            this.OrderOkButton.Text = "주문하기";
+            this.OrderOkButton.UseVisualStyleBackColor = true;
+            this.OrderOkButton.Click += new System.EventHandler(this.OrderOkButton_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("함초롬바탕 확장", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(295, 14);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 27);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "장바구니";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("함초롬바탕 확장", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(8, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 27);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "상품목록";
             // 
             // totalPrice
             // 
@@ -171,16 +216,6 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(851, 421);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // foodNameDataGridViewTextBoxColumn
             // 
             this.foodNameDataGridViewTextBoxColumn.DataPropertyName = "FoodName";
@@ -199,37 +234,74 @@
             // 
             this.foodBindingSource.DataSource = typeof(PCBaam.GUI.Models.FoodReportItem);
             // 
-            // label2
+            // tabPage2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("함초롬바탕 확장", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(8, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 27);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "상품목록";
+            this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.Controls.Add(this.chartButton);
+            this.tabPage2.Controls.Add(this.chart1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(851, 421);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // dataGridView2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("함초롬바탕 확장", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(295, 14);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 27);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "장바구니";
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.foodNameDataGridViewTextBoxColumn1,
+            this.countDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.chartBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(515, 41);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 27;
+            this.dataGridView2.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView2.TabIndex = 2;
             // 
-            // OrderOkButton
+            // chartButton
             // 
-            this.OrderOkButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrderOkButton.Font = new System.Drawing.Font("휴먼모음T", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.OrderOkButton.Location = new System.Drawing.Point(584, 365);
-            this.OrderOkButton.Name = "OrderOkButton";
-            this.OrderOkButton.Size = new System.Drawing.Size(259, 37);
-            this.OrderOkButton.TabIndex = 6;
-            this.OrderOkButton.Text = "주문하기";
-            this.OrderOkButton.UseVisualStyleBackColor = true;
-            this.OrderOkButton.Click += new System.EventHandler(this.OrderOkButton_Click);
+            this.chartButton.Location = new System.Drawing.Point(515, 337);
+            this.chartButton.Name = "chartButton";
+            this.chartButton.Size = new System.Drawing.Size(166, 31);
+            this.chartButton.TabIndex = 1;
+            this.chartButton.Text = "차트 로드";
+            this.chartButton.UseVisualStyleBackColor = true;
+            this.chartButton.Click += new System.EventHandler(this.chartButton_Click);
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(8, 6);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(519, 407);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
+            // 
+            // chartBindingSource
+            // 
+            this.chartBindingSource.DataSource = typeof(PCBaam.GUI.Models.ChartItem);
+            // 
+            // foodNameDataGridViewTextBoxColumn1
+            // 
+            this.foodNameDataGridViewTextBoxColumn1.DataPropertyName = "FoodName";
+            this.foodNameDataGridViewTextBoxColumn1.HeaderText = "음식이름";
+            this.foodNameDataGridViewTextBoxColumn1.Name = "foodNameDataGridViewTextBoxColumn1";
+            // 
+            // countDataGridViewTextBoxColumn
+            // 
+            this.countDataGridViewTextBoxColumn.DataPropertyName = "Count";
+            this.countDataGridViewTextBoxColumn.HeaderText = "판매량";
+            this.countDataGridViewTextBoxColumn.Name = "countDataGridViewTextBoxColumn";
             // 
             // OrderForm
             // 
@@ -247,6 +319,10 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.foodBindingSource)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -275,5 +351,11 @@
         private System.Windows.Forms.Button OrderOkButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button chartButton;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.BindingSource chartBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn foodNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn countDataGridViewTextBoxColumn;
     }
 }

@@ -37,6 +37,24 @@ namespace PCBaam.GUI
 
             foodBindingSource.DataSource = foodlist;
 
+
+            var query1 = from x in context.Orders
+                select new ChartItem
+                {
+                    FoodName = x.Food.음식이름,
+                    Count = x.수량
+                };
+
+            List<ChartItem> list = query1.ToList();
+
+            List<ChartItem> sumChartItems = list.GroupBy(x => x.FoodName).Select(
+                x => new ChartItem
+                {
+                    FoodName = x.Key,
+                    Count = x.Sum(y => y.Count)
+                }).ToList();
+
+            chartBindingSource.DataSource = sumChartItems;
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -126,6 +144,15 @@ namespace PCBaam.GUI
             foodIdList.Clear();
             orderList.Items.Clear();
             MessageBox.Show("주문이 완료되었습니다!!");
+        }
+
+        private void chartButton_Click(object sender, EventArgs e)
+        {
+            PC_Cafe_OrderEntities1 context = new PC_Cafe_OrderEntities1();
+
+           
+            
+                
         }
     }
 }

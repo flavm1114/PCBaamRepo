@@ -63,6 +63,10 @@
       <Project>{d32b71c9-442d-4105-a1e5-c765fc326952}</Project>
       <Name>PCBaam.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PCBaam.GUI\PCBaam.GUI.csproj">
+      <Project>{5802d40b-7517-49fa-99f5-6d66df58e687}</Project>
+      <Name>PCBaam.GUI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

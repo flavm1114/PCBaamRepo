@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PCBaam.Data;
+using PCBaam.GUI.Models;
 
 namespace PCBaam.CUI
 {
@@ -21,14 +22,16 @@ namespace PCBaam.CUI
             //                Console.WriteLine(x.패스워드);
             //            }
 
-            PC_Cafe_OrderEntities context = new PC_Cafe_OrderEntities();
-
-            List<Food> foodlist = context.Foods.ToList();
-
-            foreach (var x in foodlist)
-            {
-                Console.WriteLine(x.음식이름);
-            }
+            //PC_Cafe_OrderEntities context = new PC_Cafe_OrderEntities();
+            //
+            //            List<Food> foodlist = context.Foods.ToList();
+            //
+            //            foreach (var x in foodlist)
+            //            {
+            //                Console.WriteLine(x.음식이름);
+            //            }
+            
         }
+
     }
 }

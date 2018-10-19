@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace PCBaam.GUI.Models
 {
-    public class FoodReportItem
+    class ChartItem
     {
         public string FoodName { get; set; }
 
-        public int Price { get; set; }
-
+        public int Count { get; set; }
     }
 }
