@@ -74,9 +74,10 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(859, 450);
+            this.tabControl1.Size = new System.Drawing.Size(752, 360);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -88,10 +89,11 @@
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.panel1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(851, 421);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage1.Size = new System.Drawing.Size(744, 334);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -133,9 +135,9 @@
             this.totalPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.totalPrice.AutoSize = true;
             this.totalPrice.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.totalPrice.Location = new System.Drawing.Point(676, 326);
+            this.totalPrice.Location = new System.Drawing.Point(592, 261);
             this.totalPrice.Name = "totalPrice";
-            this.totalPrice.Size = new System.Drawing.Size(42, 20);
+            this.totalPrice.Size = new System.Drawing.Size(32, 16);
             this.totalPrice.TabIndex = 3;
             this.totalPrice.Text = "---";
             // 
@@ -144,18 +146,19 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(580, 326);
+            this.label1.Location = new System.Drawing.Point(508, 261);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 20);
+            this.label1.Size = new System.Drawing.Size(77, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "총 가격 :";
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.orderList);
-            this.panel2.Location = new System.Drawing.Point(300, 44);
+            this.panel2.Location = new System.Drawing.Point(262, 35);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(274, 302);
+            this.panel2.Size = new System.Drawing.Size(240, 242);
             this.panel2.TabIndex = 1;
             // 
             // orderList
@@ -166,8 +169,9 @@
             this.Count});
             this.orderList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.orderList.Location = new System.Drawing.Point(0, 0);
+            this.orderList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.orderList.Name = "orderList";
-            this.orderList.Size = new System.Drawing.Size(274, 302);
+            this.orderList.Size = new System.Drawing.Size(240, 242);
             this.orderList.TabIndex = 0;
             this.orderList.UseCompatibleStateImageBehavior = false;
             this.orderList.View = System.Windows.Forms.View.Details;
@@ -190,9 +194,10 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(8, 44);
+            this.panel1.Location = new System.Drawing.Point(7, 35);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(263, 303);
+            this.panel1.Size = new System.Drawing.Size(230, 242);
             this.panel1.TabIndex = 0;
             // 
             // dataGridView1
@@ -203,16 +208,14 @@
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.foodNameDataGridViewTextBoxColumn,
-            this.priceDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.foodBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(263, 303);
+            this.dataGridView1.Size = new System.Drawing.Size(230, 242);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
@@ -305,10 +308,11 @@
             // 
             // OrderForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(859, 450);
+            this.ClientSize = new System.Drawing.Size(752, 360);
             this.Controls.Add(this.tabControl1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "OrderForm";
             this.Text = "OrderForm";
             this.Load += new System.EventHandler(this.OrderForm_Load);

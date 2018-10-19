@@ -68,7 +68,20 @@ namespace PCBaam.GUI
                     MessageBox.Show("아이디와 패스워드를 확인하세요");
                     break;
                 }
+                else if (idTextbox.Text == string.Empty)
+
+                {
+                    MessageBox.Show("아이디를 입력하세요");
+                    break;
+                }
+                else if (pwTextbox.Text == String.Empty)
+                {
+                    MessageBox.Show("비밀번호를 입력하세요");
+                    break;
+                }
             }
         }
+        }
     }
-}
+
+
