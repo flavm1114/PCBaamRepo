@@ -28,8 +28,6 @@ namespace PCBaam.GUI
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            Insert();
-
             if (idTextbox.Text == string.Empty)
                 MessageBox.Show("아이디를 중복검사 하세요");
             else if (pwTextbox.Text == string.Empty)
@@ -42,6 +40,7 @@ namespace PCBaam.GUI
                 MessageBox.Show("메일을 입력하세요");
             else
             {
+                Insert();
                 MessageBox.Show("회원가입에 성공하였습니다");
             }
 
